@@ -1,4 +1,4 @@
-import { Nunito } from 'next/font/google'
+import { Nunito } from 'next/font/google' // import font
 
 import Navbar from '@/app/components/navbar/Navbar';
 import LoginModal from '@/app/components/modals/LoginModal';
@@ -12,6 +12,7 @@ import './globals.css'
 import ClientOnly from './components/ClientOnly';
 import getCurrentUser from './actions/getCurrentUser';
 
+// site title and description
 export const metadata = {
   title: 'Airbnb',
   description: 'Airbnb Clone',
