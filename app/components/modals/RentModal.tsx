@@ -179,7 +179,8 @@ const RentModal = () => {
     );
   }
 
-  // allow input for guests, rooms, bathrooms
+  // allow counter input for guests, rooms, bathrooms
+  // creates a counter input for each option
   if (step === STEPS.INFO) {
     bodyContent = (
       <div className="flex flex-col gap-8">
