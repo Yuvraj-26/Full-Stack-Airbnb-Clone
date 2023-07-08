@@ -39,38 +39,46 @@ export default async function getListings(
       query.category = category;
     }
 
-    if (roomCount) {
+    // query room count
+    // transform room count into a definite number using +roomcount
+        if (roomCount) {
       query.roomCount = {
-        gte: +roomCount
+        gte: +roomCount // filter out less rooms to get correct result
       }
     }
-
+    // query guest count
     if (guestCount) {
       query.guestCount = {
         gte: +guestCount
       }
     }
 
+    // query bathroom count
     if (bathroomCount) {
       query.bathroomCount = {
         gte: +bathroomCount
       }
     }
-
+    // query location value
     if (locationValue) {
       query.locationValue = locationValue;
     }
 
+    // filter for date range
+    // filter out all listings which have a reservation 
+    // in the desired date range
     if (startDate && endDate) {
-      query.NOT = {
+      query.NOT = { // reverse filterning 
         reservations: {
           some: {
             OR: [
-              {
+              { 
+                // filter out all conflicts in reservation
                 endDate: { gte: startDate },
                 startDate: { lte: startDate }
               },
-              {
+              { // if there is a single date reserved in the desired date for the listing
+                // the booking will not be made
                 startDate: { lte: endDate },
                 endDate: { gte: endDate }
               }
