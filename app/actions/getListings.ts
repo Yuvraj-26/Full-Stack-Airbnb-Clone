@@ -78,7 +78,10 @@ export default async function getListings(
                 startDate: { lte: startDate }
               },
               { // if there is a single date reserved in the desired date for the listing
-                // the booking will not be made
+                // the reservation will show no matches
+                // as a date within the range is already reserved
+                // if the rservation is cancelled
+                // free the dates and ensure the reservation is found
                 startDate: { lte: endDate },
                 endDate: { gte: endDate }
               }
