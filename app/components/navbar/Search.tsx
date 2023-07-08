@@ -1,6 +1,6 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation'; // search bar update
 import { useMemo } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { differenceInDays } from 'date-fns';
@@ -18,37 +18,45 @@ const Search = () => {
   const  endDate = params?.get('endDate');
   const  guestCount = params?.get('guestCount');
 
+  // if location value is present in parameters
   const locationLabel = useMemo(() => {
     if (locationValue) {
       return getByValue(locationValue as string)?.label;
     }
 
-    return 'Anywhere';
+    return 'Anywhere'; // otherwise return Anywhere
   }, [locationValue, getByValue]);
 
-  // duration functionality
+  // duration functionality using usememo
   const durationLabel = useMemo(() => {
+    // check if start and end date are available
     if (startDate && endDate) {
       const start = new Date(startDate as string);
       const end = new Date(endDate as string);
+      // difference in days calculated
       let diff = differenceInDays(end, start);
 
+      // check diff for 1 day
       if (diff === 0) {
         diff = 1;
       }
 
+      // return number of days
       return `${diff} Days`; //element for days
     }
 
     return 'Any Week' // return any week
   }, [startDate, endDate]);
 
+  // guest label for guests
   const guestLabel = useMemo(() => {
+    // if guest count
     if (guestCount) {
+      // return number of guests
       return `${guestCount} Guests`;
     }
 
-    return 'Add Guests'; // return add guests
+    return 'Add Guests'; // otherwise return add guests
   }, [guestCount]);
 
   return ( 
