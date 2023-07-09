@@ -1,35 +1,27 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from 'react';
 
-// Layer acts as wrapper to protect againts hydration error
 interface ClientOnlyProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
-
-const ClientOnly: React.FC<ClientOnlyProps> = ({
-    children
+const ClientOnly: React.FC<ClientOnlyProps> = ({ 
+  children
 }) => {
-        // Check server side rendering using state
-        const [hasMounted, setHasMounted] = useState(false);
-        // Once component loads, it can be mounted as server side rendering has finished
-        useEffect(() => {
-            setHasMounted(true);
-        }, [])
+  const [hasMounted, setHasMounted] = useState(false);
 
-        //error handling if it has not mounted
-        // so, if component has not mounted return null
-        if (!hasMounted) {
-            return null
-        }
+  useEffect(() => {
+      setHasMounted(true);
+  }, [])
 
+  if (!hasMounted) return null;
 
-    return (
-        <>
-            {children}
-        </>
-    );
-}
+  return (
+    <>
+      {children}
+    </>
+  );
+};
 
 export default ClientOnly;

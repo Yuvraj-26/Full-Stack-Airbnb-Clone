@@ -4,11 +4,13 @@ import Heading from "@/app/components/Heading";
 import Container from "@/app/components/Container";
 import ListingCard from "@/app/components/listings/ListingCard";
 
+// create interface
 interface FavoritesClientProps {
   listings: SafeListing[],
   currentUser?: SafeUser | null,
 }
 
+// favourites client handles favourites list
 const FavoritesClient: React.FC<FavoritesClientProps> = ({
   listings,
   currentUser
