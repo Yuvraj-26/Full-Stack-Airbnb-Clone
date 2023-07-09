@@ -1,15 +1,27 @@
-# Full Stack Airbnb Clone with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth 2023
+# Full Stack Airbnb Clone with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth
 
-![Copy of Fullstack Twitter Clone (8)](https://user-images.githubusercontent.com/23248726/229031522-64a49ad0-66f7-4ea8-94a8-f64a0bb56736.png)
+## Introduction
+
+Aim: Develop a Full Stack Airbnb Clone with Next.js 13 App Router
+
+## Technology Used
+- React
+- Tailwind 
+- Prisma
+- MongoDB
+- NextAuth
+- TSX | Typescript | Javascript 
+- CSS
+- Cloudinary 
+- Google Cloud Console | APIs & Services
+
+## Demonstration
 
 
-This is a repository for a Full Stack Airbnb Clone with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth.
-
-Features:
-
+## Features
 - Tailwind design
 - Tailwind animations and effects
-- Full responsiveness
+- Full responsiveness (on all devices)
 - Credential authentication
 - Google authentication
 - Github authentication
@@ -25,33 +37,92 @@ Features:
 - Creation and deletion of properties
 - Pricing calculation
 - Advanced search algorithm by category, date range, map location, number of guests, rooms and bathrooms
-    - For example we will filter out properties that have a reservation in your desired date range to travel
+    - filter out properties that have a reservation in your desired date range to travel
 - Favorites system
 - Shareable URL filters
-    - Lets say you select a category, location and date range, you will be able to share URL with a logged out friend in another browser and they will see the same results
-- How to write POST and DELETE routes in route handlers (app/api)
-- How to fetch data in server react components by directly accessing database (WITHOUT API! like Magic!)
-- How to handle files like error.tsx and loading.tsx which are new Next 13 templating files to unify loading and error handling
-- How to handle relations between Server and Child components!
+- POST and DELETE routes in route handlers (app/api)
+- Fetch data in server react components by directly accessing database without API
+- Handle error.tsx and loading.tsx  Next 13 templating files to unify loading and error handling
 
-### Prerequisites
+## Prerequisites
 
-**Node version 14.x**
+- Node version 14 to Node version 20
 
-### Cloning the repository
+- React version 18
+
+## Cloning the Repository
 
 ```shell
-git clone https://github.com/AntonioErdeljac/next13-airbnb-clone.git
+git clone https://github.com/
 ```
 
-### Install packages
+## Install packages
 
 ```shell
 npm i
 ```
 
-### Setup .env file
+## MongoDB Set Up
 
+- MongoDB Atlas 
+- Build a Database
+- Create a User
+- Add IP address or 0.0.0.0/0 if you have a Dynamic IP Address
+- Connect to Cluster using VS Code
+- Copy DATABASE_URL
+
+## GITHUB Set Up
+
+- Developer Settings
+- OAuth Application Settings
+- Set Homepage URL as localhost:3000
+- Copy GITHUB_ID and GITHUB_SECRET
+
+## Set Up Google Developer Console
+
+- Create a New Project
+- Navigate to Enabled API and Services
+- OAuth Consent Screen
+- Set User Type to External
+- Credentials: Set AUthorised Redirect URL to:
+```shell
+http://localhost:3000/api/auth/callback/google
+```
+- Copy GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET
+
+## Cloudinary Set Up
+- Dashboard
+- Copy Public Cloudinary Name
+```shell
+npm install next-cloudinary
+```
+## Prisma Set Up
+
+```shell
+npx prisma init
+```
+Set Prisma Schema providers
+
+```tsx
+//schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+```
+
+```shell
+npx prisma db push
+
+```
+Database indexes are now in sync with Prisma Schema
+
+## Setup .env File
+
+Copy Credentials into .env file
 
 ```js
 DATABASE_URL=
@@ -61,24 +132,23 @@ GITHUB_ID=
 GITHUB_SECRET=
 NEXTAUTH_SECRET=
 ```
-
-### Setup Prisma
-
-```shell
-npx prisma db push
-
-```
-
-### Start the app
+## Compile and Run The App
 
 ```shell
 npm run dev
 ```
-
-## Available commands
 
 Running commands with npm `npm run [command]`
 
 | command         | description                              |
 | :-------------- | :--------------------------------------- |
 | `dev`           | Starts a development instance of the app |
+| `lint`          | Checks code for errors and warnings |
+
+## Deployment 
+
+- Push Repository to Github
+- https://vercel.com/
+- Import from GitHub
+- Enter .env variables
+- Deploy
