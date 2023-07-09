@@ -143,3 +143,12 @@ Running commands with npm `npm run [command]`
 | command         | description                              |
 | :-------------- | :--------------------------------------- |
 | `dev`           | Starts a development instance of the app |
+| `lint`          | Checks code for errors and warnings |
+
+## Deployment 
+
+- Push Repository to Github
+- https://vercel.com/
+- Import from GitHub
+- Enter .env variables
+- Deploy
