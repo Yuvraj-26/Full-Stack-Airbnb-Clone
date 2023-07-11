@@ -29,7 +29,6 @@ Tablet          |  Mobile
 Property Information          |  Favourites
 :-------------------------:|:-------------------------:
 <img src="docs/info.png">  |  <img src="docs/favourites.png">
-<img src="docs/info.png"> 
 
 - Add your own Rental Property
 
@@ -48,6 +47,24 @@ Upload Images    |  Confirm upload
 Set Price    |  Owners can manage property listings  
 :-------------------------:|:-------------------------:
 <img src="docs/addhome5.png">  |  <img src="docs/allproperties.png"> 
+
+View and Cancel guest reservatuons    |  
+:-------------------------:|
+<img src="docs/allreservations.png">  |  
+
+- Rent a Property
+
+Filter System          |  Filter by location, date range, and guests      
+:-------------------------:|:-------------------------:
+<img src="docs/filter.png">  |  <img src="docs/rent3.png"> 
+
+Select Property       |  Select desired dates and reserve     
+:-------------------------:|:-------------------------:
+<img src="docs/rent4.png">  |  <img src="docs/rent5.png"> 
+
+View past and upcoming trips      |  Date validation (date range greyed out if reserved)
+:-------------------------:|:-------------------------:
+<img src="docs/trips.png">  |  <img src="docs/datevalidation.png"> 
 
 
 
