@@ -17,10 +17,12 @@ Aim: Develop a Full Stack Airbnb Clone with Next.js 13 App Router
 - Cloudinary 
 - Google Cloud Console | APIs & Services
 
-## Demonstration
-
-
 ## Features
+
+
+
+
+## Full Features List
 - Tailwind design
 - Tailwind animations and effects
 - Full responsiveness (on all devices)
