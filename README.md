@@ -18,6 +18,36 @@ Aim: Develop a Full Stack Airbnb Clone with Next.js 13 App Router
 - Google Cloud Console | APIs & Services
 
 ## Features
+- Full responsiveness (on all devices and screen sizes)
+
+Tablet          |  Mobile
+:-------------------------:|:-------------------------:
+<img src="docs/home1.png">  |  <img src="docs/home2.png">
+
+- Rental Property Information Page and Favourites Page
+
+Property Information          |  Favourites
+:-------------------------:|:-------------------------:
+<img src="docs/info.png">  |  <img src="docs/favourites.png">
+<img src="docs/info.png"> 
+
+- Add your own Rental Property
+
+Airbnb your Home         |  Enter location      
+:-------------------------:|:-------------------------:
+<img src="docs/addhome.png">  |  <img src="docs/addhome1.png"> 
+
+Enter Amenities       |  Enter Description     
+:-------------------------:|:-------------------------:
+<img src="docs/addhome2.png">  |  <img src="docs/addhome3.png"> 
+
+Upload Images    |  Confirm upload    
+:-------------------------:|:-------------------------:
+<img src="docs/upload.png">  |  <img src="docs/upload2.png"> 
+
+Set Price    |  Owners can manage property listings  
+:-------------------------:|:-------------------------:
+<img src="docs/addhome5.png">  |  <img src="docs/allproperties.png"> 
 
 
 
