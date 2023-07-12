@@ -50,7 +50,7 @@ Set Price    |  Owners can manage property listings
 
 View and Cancel guest reservatuons    |  Favourite owned properties
 :-------------------------:|:-------------------------:
-<img src="docs/allreservations.png">   |  <img src="docs/myproperties.png"> 
+<img src="docs/allreservations.png">   |  <img src="docs/myproperty.png"> 
 
 
 
