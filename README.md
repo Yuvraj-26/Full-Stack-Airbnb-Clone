@@ -2,6 +2,8 @@
 
 <img src="docs/home.png">
 
+<img src="docs/info.png">
+
 ## Introduction
 
 Aim: Develop a Full Stack Airbnb Clone with Next.js 13 App Router
