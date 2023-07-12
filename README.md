@@ -53,7 +53,6 @@ View and Cancel guest reservatuons    |  Favourite owned properties
 <img src="docs/allreservations.png">   |  <img src="docs/myproperty.png"> 
 
 
-
 - Rent a Property (Flter and Search input will display in the search bar)
 
 Filter System          |  Filter by location, date range, and guests      
@@ -87,8 +86,12 @@ View past and upcoming trips      |  Date validation (date range greyed out if r
 - Owner reservation cancellation
 - Creation and deletion of properties
 - Pricing calculation
+- User Redirection
+    - if a user clicks Airbnb my home, or a feature that requires an account, they will be automatically redirected to the login page
 - Advanced search algorithm by category, date range, map location, number of guests, rooms and bathrooms
     - filter out properties that have a reservation in your desired date range to travel
+    - once a reservation has been made on the property, grey out unavailable date ranges
+    - if a owner or guest cancels the reservauion, the date range will be available to reserve again as expected
 - Favorites system
 - Shareable URL filters
 - POST and DELETE routes in route handlers (app/api)
