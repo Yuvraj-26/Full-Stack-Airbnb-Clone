@@ -48,9 +48,11 @@ Set Price    |  Owners can manage property listings
 :-------------------------:|:-------------------------:
 <img src="docs/addhome5.png">  |  <img src="docs/allproperties.png"> 
 
-View and Cancel guest reservatuons    |  
-:-------------------------:|
-<img src="docs/allreservations.png">  |  
+View and Cancel guest reservatuons    |  Favourite owned properties
+:-------------------------:|:-------------------------:
+<img src="docs/allreservations.png">   |  <img src="docs/myproperties.png"> 
+
+
 
 - Rent a Property
 
