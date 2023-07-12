@@ -26,7 +26,7 @@ Tablet          |  Mobile
 
 - Rental Property Information Page and Favourites Page
 
-Property Information          |  Favourites
+Property Information (dynamic pricing)        |  Favourites
 :-------------------------:|:-------------------------:
 <img src="docs/info.png">  |  <img src="docs/favourites.png">
 
@@ -55,15 +55,23 @@ View and Cancel guest reservatuons    |  Favourite owned properties
 
 - Rent a Property (Flter and Search input will display in the search bar)
 
-Filter System          |  Filter by location, date range, and guests      
+Filter System (by Category "Arctic" )         |  Filter by Location  
 :-------------------------:|:-------------------------:
-<img src="docs/filter.png">  |  <img src="docs/rent3.png"> 
+<img src="docs/filter.png">  |  <img src="docs/location.png"> 
 
-Select Property       |  Select desired dates and reserve     
+Filter by Date Range         |  Filter System by amenities
 :-------------------------:|:-------------------------:
-<img src="docs/rent4.png">  |  <img src="docs/rent5.png"> 
+<img src="docs/rent.png">  |  <img src="docs/rent2.png"> 
 
-View past and upcoming trips      |  Date validation (date range greyed out if reserved)
+Filter Result (Search bar feedback / URL can be shared ) |  Select Property
+:-------------------------:|:-------------------------:
+<img src="docs/rent3.png">  |  <img src="docs/rent4.png"> 
+
+Select desired dates and reserve   |  Reserved successfully and saved in Reservation page 
+:-------------------------:|:-------------------------:
+<img src="docs/rent5.png">   |  <img src="docs/reservation.png"> 
+
+View past and upcoming trips (cancel reservation option)      |  Date validation (date range greyed as we have just reserved)
 :-------------------------:|:-------------------------:
 <img src="docs/trips.png">  |  <img src="docs/datevalidation.png"> 
 
