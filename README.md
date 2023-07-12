@@ -54,7 +54,7 @@ View and Cancel guest reservatuons    |  Favourite owned properties
 
 
 
-- Rent a Property
+- Rent a Property (Flter and Search input will display in the search bar)
 
 Filter System          |  Filter by location, date range, and guests      
 :-------------------------:|:-------------------------:
@@ -67,8 +67,6 @@ Select Property       |  Select desired dates and reserve
 View past and upcoming trips      |  Date validation (date range greyed out if reserved)
 :-------------------------:|:-------------------------:
 <img src="docs/trips.png">  |  <img src="docs/datevalidation.png"> 
-
-
 
 
 ## Full Features List
