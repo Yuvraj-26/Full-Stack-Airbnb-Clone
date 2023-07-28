@@ -135,7 +135,7 @@ npm i
 - Connect to Cluster using VS Code
 - Copy DATABASE_URL
 
-## GITHUB Set Up
+## GITHUB Auth Set Up
 
 - Developer Settings
 - OAuth Application Settings
