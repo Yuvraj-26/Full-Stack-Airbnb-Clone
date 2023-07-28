@@ -22,7 +22,7 @@ Aim: Develop a Full Stack Airbnb Clone with Next.js 13 App Router
 ## Features
 - Full responsiveness (on all devices and screen sizes)
 
-Tablet          |  Mobile
+Web          |  Mobile
 :-------------------------:|:-------------------------:
 <img src="docs/home1.png">  |  <img src="docs/home2.png">
 
