@@ -160,6 +160,8 @@ http://localhost:3000/api/auth/callback/google
 ```shell
 npm install next-cloudinary
 ```
+- Add upload preset with unsigned signing mode
+
 ## Prisma Set Up
 
 ```shell
