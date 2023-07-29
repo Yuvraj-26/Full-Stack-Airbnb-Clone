@@ -13,6 +13,7 @@ export default async function getListingById(
     const { listingId } = params;
 
     // use directly 
+    // listing is unique
     const listing = await prisma.listing.findUnique({
       where: {
         id: listingId,
@@ -22,22 +23,22 @@ export default async function getListingById(
       }
     });
 
+    // if no listing 
     if (!listing) {
       return null;
     }
 
     return {
-      ...listing, // sanitise 
+      ...listing,
       createdAt: listing.createdAt.toString(),
       user: {
-        ...listing.user, // sanitise user from listing
+        ...listing.user,
         createdAt: listing.user.createdAt.toString(),
         updatedAt: listing.user.updatedAt.toString(),
         emailVerified: 
-          listing.user.emailVerified?.toString() || null, // can be null
+          listing.user.emailVerified?.toString() || null,
       }
     };
-    // error handling
   } catch (error: any) {
     throw new Error(error);
   }

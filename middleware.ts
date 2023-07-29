@@ -1,9 +1,11 @@
 export { default } from "next-auth/middleware"
 
-// protect user navigating to unathorised pages by url
-// matcher used to protect required routes
-// implement callback and revert user back to /
-// Prevent accessing favourites or internal pages when logged out
+/** Protect user navigating to unathorised pages by url 
+    Matcher used to protect required routes
+    Implement callback and revert user back to / (unrestriced)
+    Prevent accessing favourites or internal pages when logged out 
+*/
+   
 export const config = { 
   matcher: [
     "/trips",

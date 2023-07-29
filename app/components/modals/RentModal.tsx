@@ -131,7 +131,8 @@ const RentModal = () => {
     return 'Back'
   }, [step]);
 
-  let bodyContent = ( // bodycontent for dynamic changes
+  // bodycontent for dynamic changes
+  let bodyContent = (
     <div className="flex flex-col gap-8">
       <Heading
         title="Which of these best describes your place?"
@@ -161,7 +162,7 @@ const RentModal = () => {
       </div>
     </div>
   )
-  
+
   // allow location to be input
   if (step === STEPS.LOCATION) {
     bodyContent = (
@@ -186,7 +187,7 @@ const RentModal = () => {
       <div className="flex flex-col gap-8">
         <Heading
           title="Share some basics about your place"
-          subtitle="What amenitis do you have?"
+          subtitle="What amenities do you have?"
         />
         <Counter 
           onChange={(value) => setCustomValue('guestCount', value)}
@@ -257,7 +258,7 @@ const RentModal = () => {
     )
   }
 
-  // allow set pricing
+  // allow pricing to be set
   if (step === STEPS.PRICE) {
     bodyContent = (
       <div className="flex flex-col gap-8">

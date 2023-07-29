@@ -12,7 +12,8 @@ interface IUseFavorite {
   listingId: string;
   currentUser?: SafeUser | null
 }
-// write hook
+
+// write hook here
 const useFavorite = ({ listingId, currentUser }: IUseFavorite) => {
   const router = useRouter();
 
@@ -26,17 +27,15 @@ const useFavorite = ({ listingId, currentUser }: IUseFavorite) => {
 
   const toggleFavorite = useCallback(async (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
-
-    // if no current user, important to return loginmodal on open
-    // if not signed in, and user attemps to favourite
-    // login modal will open instead
+    // if no current user, return login modal on open
+    // if not signed in, and user attempts to favourite a property/listing
+    // login modal will open for sign in
     if (!currentUser) {
       return loginModal.onOpen();
     }
 
     try {
       let request;
-
       // unfavourite action
       if (hasFavorited) {
         request = () => axios.delete(`/api/favorites/${listingId}`);
@@ -44,7 +43,7 @@ const useFavorite = ({ listingId, currentUser }: IUseFavorite) => {
         // favourite action
         request = () => axios.post(`/api/favorites/${listingId}`);
       }
-
+      
       // display success to user if action successful
       await request();
       router.refresh();

@@ -1,6 +1,6 @@
 import Loader from "@/app/components/Loader";
 
-// loading component implemented
+// loading component for load state
 const Loading = () => {
   return ( 
     <Loader />

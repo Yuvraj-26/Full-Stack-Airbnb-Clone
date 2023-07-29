@@ -12,8 +12,8 @@ const ListingPage = async () => {
   const listings = await getFavoriteListings();
   const currentUser = await getCurrentUser();
 
-  // if listing length == 0
-  // display that no favourite listings found
+  // if no listings
+  // display no favourite listings found
   if (listings.length === 0) {
     return (
       <ClientOnly>

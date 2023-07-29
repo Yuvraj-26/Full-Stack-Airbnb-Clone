@@ -1,11 +1,11 @@
 import { Listing, Reservation, User } from "@prisma/client";
 
-// create SafeListing
+// export SafeListing
 export type SafeListing = Omit<Listing, "createdAt"> & {
   createdAt: string;
 };
 
-// create SafeReservation
+// export SafeReservation
 export type SafeReservation = Omit<
   Reservation, 
   "createdAt" | "startDate" | "endDate" | "listing"
@@ -15,6 +15,7 @@ export type SafeReservation = Omit<
   endDate: string;
   listing: SafeListing;
 };
+
 // sanitise User to not pass unintended objects
 // by modifying the types,
 // create SafeUser to fix the passing issue to ensure correct type

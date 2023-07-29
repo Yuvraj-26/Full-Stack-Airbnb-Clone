@@ -29,7 +29,8 @@ const Input: React.FC<InputProps> = ({
   required,
   errors,
 }) => {
-  return ( // style component
+  return (
+    // style componnet
     <div className="w-full relative">
       {formatPrice && ( // render icon BiDollar
         <BiDollar
@@ -45,7 +46,7 @@ const Input: React.FC<InputProps> = ({
       <input
         id={id}
         disabled={disabled}
-        {...register(id, { required })} // register function 
+        {...register(id, { required })} // register function
         placeholder=" " // empty space
         type={type}
         className={`
@@ -66,10 +67,12 @@ const Input: React.FC<InputProps> = ({
           ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'}
         `}
       />
-      <label // label for animate effect
-      // when clicking on input label, the text is focused
-      // creating an clean animation where label hovers above
-      // where user is typing
+      
+      <label 
+        // label for animate effect
+        // when clicking on input label, the text is focused
+        // creating an clean animation where label hovers above
+        // where user is typing
         className={`
           absolute 
           text-md

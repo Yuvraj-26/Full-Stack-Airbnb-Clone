@@ -1,9 +1,9 @@
 'use client';
 
-// create loader using react spinners
-// animated loader icon when refreshing or loading pages/interfaces
 import { PuffLoader } from "react-spinners";
 
+// create loader using react spinners
+// animated loader icon when refreshing or loading pages/interfaces
 const Loader = () => {
   return ( 
     <div

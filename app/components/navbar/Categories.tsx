@@ -25,7 +25,7 @@ import Container from '../Container';
 export const categories = [
   {
     label: 'Beach',
-    icon: TbBeach, // use imported icon
+    icon: TbBeach,
     description: 'This property is close to the beach!',
   },
   {
@@ -109,7 +109,7 @@ const Categories = () => {
   if (!isMainPage) {
     return null;
   }
-  // styling
+
   return (
     <Container>
       <div

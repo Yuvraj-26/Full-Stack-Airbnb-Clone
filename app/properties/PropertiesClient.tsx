@@ -27,6 +27,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
 
   const onDelete = useCallback((id: string) => {
     setDeletingId(id);
+
     // delete listing
     axios.delete(`/api/listings/${id}`)
     .then(() => {
@@ -42,7 +43,8 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
     })
   }, [router]);
 
-  // return list of properties
+
+  // return list of active properties with action label to delete property listing
   return ( 
     <Container>
       <Heading
@@ -62,7 +64,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
           gap-8
         "
       >
-        {listings.map((listing: any) => ( // map listing using listing card
+        {listings.map((listing: any) => (
           <ListingCard
             key={listing.id}
             data={listing}

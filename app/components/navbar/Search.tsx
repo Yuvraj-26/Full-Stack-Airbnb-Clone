@@ -1,6 +1,7 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation'; // search bar update
+// search bar update
+import { useSearchParams } from 'next/navigation';
 import { useMemo } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { differenceInDays } from 'date-fns';
@@ -24,7 +25,8 @@ const Search = () => {
       return getByValue(locationValue as string)?.label;
     }
 
-    return 'Anywhere'; // otherwise return Anywhere
+    // otherwise return Anywhere
+    return 'Anywhere';
   }, [locationValue, getByValue]);
 
   // duration functionality using usememo
@@ -41,22 +43,25 @@ const Search = () => {
         diff = 1;
       }
 
-      // return number of days
-      return `${diff} Days`; //element for days
+      // return number of days using element for days
+      return `${diff} Days`;
     }
 
-    return 'Any Week' // return any week
+    // return any week
+    return 'Any Week'
   }, [startDate, endDate]);
 
   // guest label for guests
   const guestLabel = useMemo(() => {
+
     // if guest count
     if (guestCount) {
       // return number of guests
       return `${guestCount} Guests`;
     }
 
-    return 'Add Guests'; // otherwise return add guests
+    // otherwise return add guests
+    return 'Add Guests';
   }, [guestCount]);
 
   return ( 

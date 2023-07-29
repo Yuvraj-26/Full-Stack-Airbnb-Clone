@@ -17,10 +17,11 @@ interface TripsClientProps {
   currentUser?: SafeUser | null,
 }
 
+// TripsClient
 // trips client handles reservation and deletion of reservation
 // user selects date range and clicks reserve
 // automatically redirect to my trips on successful reservation
-// user can delete reservation if required
+// user can delete reservation if necessary
 const TripsClient: React.FC<TripsClientProps> = ({
   reservations,
   currentUser
@@ -31,7 +32,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
   const onCancel = useCallback((id: string) => {
     setDeletingId(id);
 
-    // reservation deletion
+    // cancel reservation
     axios.delete(`/api/reservations/${id}`)
     .then(() => {
       toast.success('Reservation cancelled');
@@ -45,7 +46,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
     })
   }, [router]);
 
-
+  // container for Trips to show past and upcoming trips for user account
   // return Trips title and subtitle with styling
   return (
     <Container>

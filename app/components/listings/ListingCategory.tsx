@@ -2,6 +2,7 @@
 
 import { IconType } from "react-icons";
 
+// create interface
 interface CategoryViewProps {
   icon: IconType,
   label: string,

@@ -13,7 +13,7 @@ export type CountrySelectValue = {
   value: string
 }
 
-// implement interface
+// create interface
 interface CountrySelectProps {
   value?: CountrySelectValue;
   onChange: (value: CountrySelectValue) => void;
@@ -25,7 +25,6 @@ const CountrySelect: React.FC<CountrySelectProps> = ({
 }) => {
   const { getAll } = useCountries();
 
-  // return for functionality for user to select country for search
   return ( 
     <div>
       <Select

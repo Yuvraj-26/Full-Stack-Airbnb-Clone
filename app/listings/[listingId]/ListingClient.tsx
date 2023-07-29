@@ -16,6 +16,7 @@ import ListingHead from "@/app/components/listings/ListingHead";
 import ListingInfo from "@/app/components/listings/ListingInfo";
 import ListingReservation from "@/app/components/listings/ListingReservation";
 
+// date range for reservation date selection
 const initialDateRange = {
   startDate: new Date(),
   endDate: new Date(),
@@ -32,7 +33,6 @@ interface ListingClientProps {
   currentUser?: SafeUser | null;
 }
 
-// 
 const ListingClient: React.FC<ListingClientProps> = ({
   listing,
   reservations = [],
@@ -66,7 +66,10 @@ const ListingClient: React.FC<ListingClientProps> = ({
   const [totalPrice, setTotalPrice] = useState(listing.price);
   const [dateRange, setDateRange] = useState<Range>(initialDateRange);
 
+
+  // create reservation
   const onCreateReservation = useCallback(() => {
+      // if no current user, open login modal
       if (!currentUser) {
         return loginModal.onOpen();
       }
@@ -79,6 +82,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
         listingId: listing?.id
       })
       .then(() => {
+        // listing success
         toast.success('Listing reserved!');
         setDateRange(initialDateRange);
         router.push('/trips');
@@ -100,12 +104,14 @@ const ListingClient: React.FC<ListingClientProps> = ({
   ]);
 
   useEffect(() => {
+    // calauclate difference in days
     if (dateRange.startDate && dateRange.endDate) {
       const dayCount = differenceInDays(
         dateRange.endDate, 
         dateRange.startDate
       );
       
+      // calculate total price using listing price and day count
       if (dayCount && listing.price) {
         setTotalPrice(dayCount * listing.price);
       } else {

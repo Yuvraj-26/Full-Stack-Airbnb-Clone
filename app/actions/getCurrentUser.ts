@@ -14,14 +14,16 @@ export default async function getCurrentUser() {
 
     // if session not correct
     if (!session?.user?.email) {
-      return null; // session does not exist
+      // session does not exist
+      return null;
     }
-    
+
     const currentUser = await prisma.user.findUnique({
       where: {
         email: session.user.email as string,
       }
     });
+
     // if no current user
     if (!currentUser) {
       return null;

@@ -8,6 +8,7 @@ import { SafeUser } from "@/app/types";
 import Heading from "../Heading";
 import HeartButton from "../HeartButton";
 
+// create interface
 interface ListingHeadProps {
   title: string;
   locationValue: string;

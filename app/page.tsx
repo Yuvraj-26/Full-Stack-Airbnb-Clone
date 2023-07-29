@@ -17,6 +17,7 @@ const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
 
+  // if listings length is equivalent (data type and value) to 0
   if (listings.length === 0) {
     return (
       <ClientOnly>
@@ -41,7 +42,7 @@ const Home = async ({ searchParams }: HomeProps) => {
             gap-8
           "
         >
-          {listings.map((listing: any) => ( // load listings 
+          {listings.map((listing: any) => ( // load listings
             <ListingCard
               currentUser={currentUser}
               key={listing.id}

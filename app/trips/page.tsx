@@ -7,9 +7,11 @@ import getReservations from "@/app/actions/getReservations";
 
 import TripsClient from "./TripsClient";
 
+// Trips page displays past and upcoming trips (history of trips)
 const TripsPage = async () => {
   const currentUser = await getCurrentUser();
 
+  // restrict unathorised users
   if (!currentUser) {
     return (
       <ClientOnly>
@@ -22,7 +24,8 @@ const TripsPage = async () => {
   }
 
   const reservations = await getReservations({ userId: currentUser.id });
-
+  
+  // if no reservations
   if (reservations.length === 0) {
     return (
       <ClientOnly>

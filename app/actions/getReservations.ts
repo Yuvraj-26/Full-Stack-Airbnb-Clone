@@ -1,5 +1,6 @@
 import prisma from "@/app/libs/prismadb";
 
+// create interface
 // get reservations used in my trips route and my reservations route
 interface IParams {
   listingId?: string;
@@ -16,10 +17,10 @@ export default async function getReservations(
   // depending on listingid userid or authorid is sent
   // qeuery as required
   try {
-    const { listingId, userId, authorId } = params;
-
     // query in my trips or by 0Auth ID in my reservations
     // manage all reservations of all users by authoring property
+    const { listingId, userId, authorId } = params;
+
     const query: any = {};
     
     // if listing ID, define query
@@ -45,6 +46,7 @@ export default async function getReservations(
       include: {
         listing: true
       },
+      // order
       orderBy: {
         createdAt: 'desc'
       }
@@ -63,6 +65,7 @@ export default async function getReservations(
     }));
 
     return safeReservations;
+    // error handling
   } catch (error: any) {
     throw new Error(error);
   }

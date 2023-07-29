@@ -10,6 +10,7 @@ import TripsClient from "./ReservationsClient";
 const ReservationsPage = async () => {
   const currentUser = await getCurrentUser();
 
+  // if no current user, authenticate via log in
   if (!currentUser) {
     return (
       <ClientOnly> 
@@ -23,6 +24,7 @@ const ReservationsPage = async () => {
 
   const reservations = await getReservations({ authorId: currentUser.id });
 
+  // if no reservations
   if (reservations.length === 0) {
     return (
       <ClientOnly>

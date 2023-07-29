@@ -6,11 +6,13 @@ import getCurrentUser from "./getCurrentUser";
 export default async function getFavoriteListings() {
   try {
     const currentUser = await getCurrentUser();
+
     // if no current user
     if (!currentUser) {
       return [];
     }
 
+    // store favourites which uses findmany as many properties can be favourited
     const favorites = await prisma.listing.findMany({
       where: {
         id: {

@@ -43,10 +43,11 @@ const ReservationsClient: React.FC<ReservationsClientProps> = ({
       toast.error('Something went wrong.')
     })
     .finally(() => {
-      setDeletingId(''); // remove deleting id
+      setDeletingId(''); // remoove deleting id
     })
   }, [router]);
 
+  // return reservatoons container 
   return (
     <Container>
       <Heading

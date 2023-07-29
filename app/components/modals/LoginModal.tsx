@@ -26,6 +26,7 @@ const LoginModal = () => {
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
   const [isLoading, setIsLoading] = useState(false);
+
   // handle submit for register
   const { 
     register, 
@@ -63,11 +64,12 @@ const LoginModal = () => {
     });
   }
 
+  // content for log in functionality
   const onToggle = useCallback(() => {
     loginModal.onClose();
     registerModal.onOpen();
   }, [loginModal, registerModal])
-  // content for log in functionality
+
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
@@ -94,19 +96,18 @@ const LoginModal = () => {
     </div>
   )
 
+  // footer content with Google log in option and GitHub log in option
   const footerContent = (
     <div className="flex flex-col gap-4 mt-3">
       <hr />
       <Button 
         outline 
-        // Google option for login
         label="Continue with Google"
         icon={FcGoogle}
         onClick={() => signIn('google')}
       />
       <Button 
         outline 
-        // Github option for login
         label="Continue with Github"
         icon={AiFillGithub}
         onClick={() => signIn('github')}
@@ -126,7 +127,8 @@ const LoginModal = () => {
       </div>
     </div>
   )
-  // return Login
+
+  // return log in
   return (
     <Modal
       disabled={isLoading}

@@ -4,17 +4,18 @@ import { useEffect } from "react";
 
 import EmptyState from "@/app/components/EmptyState";
 
-// write interface
+// interface
 interface ErrorStateProps {
   error: Error
 }
 
-// error message incase error occurs
+// error state - can use console.error or can also use analytics to send errors
 const ErrorState: React.FC<ErrorStateProps> = ({ error }) => {
   useEffect(() => {
-    console.error(error); // console.error or can use analytics to send
+    console.error(error);
   }, [error]);
 
+  // return error message to user
   return ( 
     <EmptyState
       title="Uh Oh"

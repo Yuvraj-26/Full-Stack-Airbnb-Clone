@@ -41,11 +41,13 @@ export default async function getListings(
 
     // query room count
     // transform room count into a definite number using +roomcount
-        if (roomCount) {
+    if (roomCount) {
       query.roomCount = {
-        gte: +roomCount // filter out less rooms to get correct result
+        // filter out less rooms to get correct result
+        gte: +roomCount
       }
     }
+
     // query guest count
     if (guestCount) {
       query.guestCount = {
@@ -59,6 +61,7 @@ export default async function getListings(
         gte: +bathroomCount
       }
     }
+
     // query location value
     if (locationValue) {
       query.locationValue = locationValue;
@@ -68,16 +71,18 @@ export default async function getListings(
     // filter out all listings which have a reservation 
     // in the desired date range
     if (startDate && endDate) {
-      query.NOT = { // reverse filterning 
+      // reverse filtering method
+      query.NOT = {
         reservations: {
           some: {
             OR: [
-              { 
+              {
                 // filter out all conflicts in reservation
                 endDate: { gte: startDate },
                 startDate: { lte: startDate }
               },
-              { // if there is a single date reserved in the desired date for the listing
+              {
+                // if there is a single date reserved in the desired date for the listing
                 // the reservation will show no matches
                 // as a date within the range is already reserved
                 // if the rservation is cancelled
@@ -98,7 +103,8 @@ export default async function getListings(
         createdAt: 'desc'
       }
     });
-    // using safelisting
+
+    // use safelisting
     const safeListings = listings.map((listing) => ({
       ...listing,
       createdAt: listing.createdAt.toISOString(),

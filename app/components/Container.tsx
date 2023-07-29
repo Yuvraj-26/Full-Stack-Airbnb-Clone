@@ -4,9 +4,10 @@ interface ContainerProps {
   children: React.ReactNode
 };
 
+// Apply view port options for different screen sizes
 const Container: React.FC<ContainerProps> = ({ children }) => {
   return ( 
-    <div // View port options for different screen sizes
+    <div
       className="
         max-w-[2520px]
         mx-auto

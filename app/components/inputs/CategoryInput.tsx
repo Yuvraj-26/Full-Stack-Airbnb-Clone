@@ -2,7 +2,7 @@
 
 import { IconType } from "react-icons";
 
-// write interface 
+// create interface
 interface CategoryBoxProps {
   icon: IconType,
   label: string;

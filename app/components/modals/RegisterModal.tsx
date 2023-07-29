@@ -120,7 +120,6 @@ const RegisterModal= () => {
           mt-4 
           font-light
         "
-        // if account already created, allow log in redirect
       >
         <p>Already have an account?
           <span 

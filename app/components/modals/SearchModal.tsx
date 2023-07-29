@@ -42,7 +42,7 @@ const SearchModal = () => {
     key: 'selection' // date selection
   });
 
-  // create map
+    // create map
   const Map = useMemo(() => dynamic(() => import('../Map'), { 
     ssr: false 
   }), [location]);
@@ -65,7 +65,8 @@ const SearchModal = () => {
     let currentQuery = {};
 
     if (params) {
-      currentQuery = qs.parse(params.toString()) // get parameters and parse
+      // get parameters and parse
+      currentQuery = qs.parse(params.toString())
     }
 
     const updatedQuery: any = {
@@ -109,6 +110,7 @@ const SearchModal = () => {
     params
   ]);
 
+  // search 
   const actionLabel = useMemo(() => {
     if (step === STEPS.INFO) {
       return 'Search'
@@ -122,6 +124,7 @@ const SearchModal = () => {
       return undefined
     }
 
+    // allow user to change inputs using back
     return 'Back'
   }, [step]);
 
@@ -129,7 +132,7 @@ const SearchModal = () => {
   let bodyContent = (
     <div className="flex flex-col gap-8">
       <Heading
-        title="Where do you wanna go?"
+        title="Where do you want to go?"
         subtitle="Find the perfect location!"
       />
       <CountrySelect 
@@ -141,7 +144,7 @@ const SearchModal = () => {
       <Map center={location?.latlng} />
     </div>
   )
-  
+
   // user selects date range, go to next step
   if (step === STEPS.DATE) {
     bodyContent = (
@@ -192,6 +195,7 @@ const SearchModal = () => {
     )
   }
 
+  // return filters
   return (
     <Modal
       isOpen={searchModal.isOpen}

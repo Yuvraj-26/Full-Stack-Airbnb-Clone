@@ -7,7 +7,7 @@ import getListings from "@/app/actions/getListings";
 
 import PropertiesClient from "./PropertiesClient";
 
-// properties page to display properties of the user
+// properties page to display properties listed by the user ie owned properties or owned listings
 const PropertiesPage = async () => {
   const currentUser = await getCurrentUser();
 
@@ -22,7 +22,7 @@ const PropertiesPage = async () => {
   // get listings
   const listings = await getListings({ userId: currentUser.id });
 
-  // if no listings display, no propeties found
+  // if no listings, display no propeties found
   if (listings.length === 0) {
     return (
       <ClientOnly>

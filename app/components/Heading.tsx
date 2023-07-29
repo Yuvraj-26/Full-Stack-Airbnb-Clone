@@ -6,7 +6,7 @@ interface HeadingProps {
   center?: boolean;
 }
 
-// heading
+// heading with styling
 const Heading: React.FC<HeadingProps> = ({ 
   title, 
   subtitle,

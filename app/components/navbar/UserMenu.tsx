@@ -57,7 +57,6 @@ const UserMenu: React.FC<UserMenuProps> = ({
             transition 
             cursor-pointer
           "
-          // Create button for Adding Rental Home functionality
         >
           Airbnb your home
         </div>
@@ -79,7 +78,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
           transition
           "
         >
-          <AiOutlineMenu /> 
+          <AiOutlineMenu />
           <div className="hidden md:block">
             <Avatar src={currentUser?.image} />
           </div>

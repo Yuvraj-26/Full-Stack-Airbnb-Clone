@@ -29,7 +29,6 @@ interface ListingCardProps {
 };
 
 // ListingCard used in initial index and in favourites, reservations, properties, and trips
-// 
 const ListingCard: React.FC<ListingCardProps> = ({
   data,
   reservation,

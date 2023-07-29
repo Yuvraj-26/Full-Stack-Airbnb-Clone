@@ -10,6 +10,7 @@ interface FavoritesClientProps {
   currentUser?: SafeUser | null,
 }
 
+// favourites client for liked porperties on user account
 // favourites client handles favourites list
 const FavoritesClient: React.FC<FavoritesClientProps> = ({
   listings,

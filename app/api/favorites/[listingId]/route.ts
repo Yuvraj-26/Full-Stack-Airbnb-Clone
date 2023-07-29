@@ -16,8 +16,8 @@ export async function POST(
 ) {
   // get current user
   const currentUser = await getCurrentUser();
-  
-  // check for current user
+
+  // check for current user as necessary
   if (!currentUser) {
     return NextResponse.error();
   }
@@ -46,6 +46,7 @@ export async function POST(
     }
   });
 
+  
   return NextResponse.json(user);
 }
 
