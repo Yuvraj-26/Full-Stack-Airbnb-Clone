@@ -2,7 +2,9 @@
 
 <img src="docs/home.png">
 
-<img src="docs/info.png">
+## Deployment Link: Try the APP youself
+
+https://full-stack-property-marketplace.vercel.app/
 
 ## Introduction
 
@@ -117,7 +119,7 @@ View past and upcoming trips (cancel reservation option)      |  Date validation
 ## Cloning the Repository
 
 ```shell
-git clone https://github.com/
+git clone https://github.com/Yuvraj-26/Full-Stack-Airbnb-Clone-Deployment.git
 ```
 
 ## Install packages
