@@ -2,7 +2,7 @@
 
 <img src="docs/home.png">
 
-## Deployment Link: Try the APP youself
+## Deployment Link: Try the Application yourself
 
 https://full-stack-property-marketplace.vercel.app/
 
